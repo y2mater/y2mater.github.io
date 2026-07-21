@@ -1,0 +1,19 @@
+html,body{margin:0;padding:0;height:100%;background-color:#000;overflow:hidden;}
+.if-container{width:100%;height:100vh;overflow:hidden;}
+iframe{width:100%;height:calc(100% + 100px);border:none;display:block;}
+@media (max-width:1024px){iframe{height:calc(100% + 80px);}}
+@media (max-width:767px){iframe{height:calc(100% + 60px);}}
+.donation-card{font-family:Arial,Helvetica,sans-serif;position:fixed;bottom:24px;z-index:999;padding:16px 20px;border-radius:12px;background:#F9F9F9;border:2px solid #F20A51;box-shadow:0 6px 20px rgba(0,0,0,.08);box-sizing:border-box;animation:fadeInUp .6s ease-out 1s both;}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(15px);}to{opacity:1;transform:translateY(0);}}
+@media (min-width:993px){.donation-card{left:24px;width:460px;min-height:140px;transform:none;}}
+@media (max-width:992px) and (min-width:601px){.donation-card{left:50%;transform:translateX(-50%);width:85%;max-width:420px;bottom:20px;padding:14px 18px;}@keyframes fadeInUp{from{opacity:0;transform:translateX(-50%) translateY(15px);}to{opacity:1;transform:translateX(-50%) translateY(0);}}}
+@media (max-width:600px){.donation-card{left:50%;transform:translateX(-50%);width:calc(100% - 24px);max-width:none;bottom:16px;padding:14px 16px;border-radius:10px;}@keyframes fadeInUp{from{opacity:0;transform:translateX(-50%) translateY(15px);}to{opacity:1;transform:translateX(-50%) translateY(0);}}}
+.donation-header{display:flex;justify-content:space-between;align-items:center;gap:12px;}
+.donation-header h4{margin:0;font-size:1rem;line-height:1.3;color:#111;}
+.donate-btn{display:inline-block;padding:8px 16px;background:#F20A51;color:#fff;border-radius:6px;text-decoration:none;font-size:.9rem;font-weight:600;white-space:nowrap;transition:background .2s ease;}
+.donate-btn:hover{background:#d10845;}
+.donation-divider{border:0;border-top:1px solid #e0e0e0;margin:10px 0;}
+.donation-desc{margin:0;font-size:.85rem;line-height:1.45;color:#333;}
+.donation-desc ul{margin:8px 0 0;padding-left:18px;}
+.donation-desc li{margin-bottom:4px;}
+@media (max-width:400px){.donation-card{width:calc(100% - 16px);bottom:12px;padding:12px 14px;}.donation-header{flex-direction:column;align-items:flex-start;gap:8px;}.donation-header h4{font-size:.9rem;}.donate-btn{width:100%;text-align:center;padding:8px 12px;font-size:.85rem;}.donation-desc{font-size:.78rem;}}
